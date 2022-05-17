@@ -69,3 +69,100 @@ body{
     pointer-events: auto;
     transition: opacity 0.5s 0.5s ease;
 }
+
+.container{
+    height: 270px;
+    width: 420px;
+    border-radius: 7px;
+    background-color: #fff;
+    padding: 30px 30px 35px;
+    transition: height 0.2s ease;
+}
+
+.container.active{
+    height: 525px;
+}
+
+.container form{
+    height: 210px;
+    cursor: pointer;
+    background: blue;
+    color: #fff;
+    display: flex;
+    text-align: center;
+    border-radius: 7px;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.2s ease;
+}
+
+.container.active form{
+    height: 225px;
+    pointer-events: none;
+}
+
+.container form img{
+    display: none;
+    max-width: 148px;
+}
+
+.container.active form img{
+    display: block;
+}
+
+.container.active form .content{
+    display: none;
+}
+.container form .content i{
+    color: #fff;
+    font-size: 55px;
+}
+
+.container form .content p{
+    color: #fff;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.container .details{
+    opacity: 0;
+    margin-top: 25px ;
+    pointer-events: none;
+}
+
+.container.active .details{
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.5s 0.05s ease;
+}
+
+.container .details textarea{
+    width: 100%;
+    height: 128px;
+    outline: none;
+    color: blue;
+    font-size: 18px;
+    background: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid blue;
+}
+
+.container .details .buttons{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.container .details .buttons button{
+    height: 55px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: blue;
+    border-radius: 5px;
+    width: calc(100%/2 - 10px);
+}
